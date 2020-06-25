@@ -49,7 +49,7 @@ def detect(request):
 	for (startX, startY, endX, endY) in rects:
 		cv2.rectangle(image, (startX, startY), (endX, endY), (0, 255, 0), 2)
 	# lưu hình lại
-	cv2.imwrite('out.png', image)
+	cv2.imwrite('/home/django/django_project/django_project/static/out.png', image)
 	return HttpResponse('<img src="/static/out.png" />')
 	# return a JSON response
 	# return JsonResponse(data)
