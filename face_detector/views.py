@@ -50,7 +50,7 @@ def detect(request):
 		cv2.rectangle(image, (startX, startY), (endX, endY), (0, 255, 0), 2)
 	# lưu hình lại
 	cv2.imwrite('django_project/static/out.png', image)
-	return HttpResponse('<img src="/static/out.gif" />')
+	return HttpResponse('<img src="/static/out.png" />')
 	# return a JSON response
 	# return JsonResponse(data)
 def _grab_image(path=None, stream=None, url=None):
